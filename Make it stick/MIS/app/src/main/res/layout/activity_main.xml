@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#fffeea">
+
+    <TextView
+        android:text="What's in Rabat"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:gravity="center"/>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        />
+
+    <TextView
+        android:id="@+id/monuments"
+        style="@style/BoxStyle"
+        android:text="@string/box_monuments"
+        android:background="@color/box_monuments"
+        />
+
+    <TextView
+        android:id="@+id/gardens"
+        style="@style/BoxStyle"
+        android:text="@string/box_gardens"
+        android:background="@color/box_gardens"
+        />
+
+    <TextView
+        android:id="@+id/transportation"
+        style="@style/BoxStyle"
+        android:text="@string/box_Transportation"
+        android:background="@color/box_transportation"
+        />
+
+    <TextView
+        android:id="@+id/restos"
+        style="@style/BoxStyle"
+        android:text="@string/box_restos"
+        android:background="@color/box_restos"
+
+        />
+
+    <TextView
+        android:id="@+id/secrets"
+        style="@style/BoxStyle"
+        android:text="@string/box_secret"
+        android:background="@color/box_secrets"
+
+        />
+
+</LinearLayout>

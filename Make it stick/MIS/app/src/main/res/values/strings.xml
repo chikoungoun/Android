@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MIS</string>
+
+    <string name="box_monuments">Monuments</string>
+
+    <string name="box_gardens">Gardens</string>
+
+    <string name="box_Transportation">Transportation</string>
+
+    <string name="box_restos">Food n Drink</string>
+
+    <string name="box_secret">Hidden</string>
+
+
+</resources>

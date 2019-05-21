@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <!-- Box Background colors -->
+    <color name="box_monuments">#992A08</color>
+
+    <color name="box_gardens">#FF6536</color>
+
+    <color name="box_transportation">#E64919</color>
+
+    <color name="box_restos">#009971</color>
+
+    <color name="box_secrets">#19E6B0</color>
+
+</resources>
