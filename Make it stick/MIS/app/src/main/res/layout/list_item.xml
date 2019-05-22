@@ -4,7 +4,7 @@
         android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/item_name"
+        android:id="@+id/item_id"
         style="@style/BoxStyle"
         android:text="blabla"
 

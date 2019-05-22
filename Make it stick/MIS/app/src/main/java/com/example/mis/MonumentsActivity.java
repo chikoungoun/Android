@@ -16,13 +16,13 @@ public class MonumentsActivity extends AppCompatActivity {
         setContentView(R.layout.menu_list);
 
         ArrayList<Item> monuments = new ArrayList<Item>();
-        monuments.add(new Item("Oudaya"));
-        monuments.add(new Item("Mausolée"));
-        monuments.add(new Item("Hassan Tower"));
-        monuments.add(new Item("Medina"));
-        monuments.add(new Item("Bab el Had"));
-        monuments.add(new Item("Bab Rouah"));
-        monuments.add(new Item("Mellah"));
+        monuments.add(new Item("Oudaya",R.color.box_monuments));
+        monuments.add(new Item("Mausolée",R.color.box_gardens));
+        monuments.add(new Item("Hassan Tower",R.color.box_transportation));
+        monuments.add(new Item("Medina",R.color.box_restos));
+        monuments.add(new Item("Bab el Had",R.color.box_secrets));
+        monuments.add(new Item("Bab Rouah",R.color.box_monuments));
+        monuments.add(new Item("Mellah",R.color.box_gardens));
 
         ItemAdapter adapter = new ItemAdapter(this,monuments);
         ListView listView = findViewById(R.id.list);

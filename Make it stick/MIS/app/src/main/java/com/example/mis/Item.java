@@ -2,13 +2,19 @@ package com.example.mis;
 
 public class Item {
 
-    private String name;
+    private String mName;
+    private int mColor;
 
-    public  Item(String i){
-        name = i;
+    public  Item(String i,int c){
+        mName = i;
+        mColor = c;
     }
 
     public String getName() {
-        return name;
+        return mName;
+    }
+
+    public int getColor() {
+        return mColor;
     }
 }

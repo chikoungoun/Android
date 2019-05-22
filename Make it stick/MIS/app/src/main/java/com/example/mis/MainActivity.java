@@ -21,9 +21,23 @@ public class MainActivity extends AppCompatActivity {
         monuments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,MonumentsActivity.class);
+                Intent i = new Intent(MainActivity.this, MonumentsActivity.class);
                 startActivity(i);
             }
+        });
+
+
+        /**
+         * Gardens
+         */
+        TextView gardens = findViewById(R.id.gardens);
+        gardens.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, GardensActivity.class);
+                startActivity(i);
+            }
+
         });
     }
 }
