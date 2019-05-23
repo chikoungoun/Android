@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GardensActivity"></activity>
+        <activity android:name=".testActivity"></activity>
+        <activity android:name=".GardensActivity" />
         <activity android:name=".MonumentsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
