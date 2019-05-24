@@ -4,34 +4,34 @@ import java.util.Date;
 
 public class Earthquake {
 
-    private String magnitude;
+    private double magnitude;
 
-    private  String city;
+    private  String location;
 
-    private String date;
-
-
+    private long timeStamp;
 
 
 
-    public Earthquake( String c, String m, String d){
+
+
+    public Earthquake( String c, double m, long d){
 
         magnitude = m;
-        city = c;
-        date = d;
+        location = c;
+        timeStamp = d;
     }
 
 
 
-    public String getDate() {
-        return date;
+    public long getTimeStamp() {
+        return timeStamp;
     }
 
-    public String getMagnitude() {
+    public double getMagnitude() {
         return magnitude;
     }
 
-    public String getCity() {
-        return city;
+    public String getLocation() {
+        return location;
     }
 }

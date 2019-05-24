@@ -6,7 +6,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public final  class QueryUtils {
 
@@ -56,9 +58,13 @@ public final  class QueryUtils {
                 JSONObject currentEarthquake = earthquakeArray.getJSONObject(i);
                 JSONObject properties = currentEarthquake.getJSONObject("properties");
 
-                String magnitude = properties.getString("mag");
+                double magnitude = properties.getDouble("mag");
                 String city = properties.getString("place");
-                String date = properties.getString("time");
+                // Extracting as a long to take the timestamp
+                long date = properties.getLong("time");
+
+
+
 
                 Earthquake earthquake = new Earthquake(city,magnitude,date);
                 earthquakes.add(earthquake);
