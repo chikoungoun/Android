@@ -25,10 +25,13 @@ import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Loader;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,9 +46,17 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
      */
     private static final int EARTHQUAKE_LOADER_ID = 1;
 
+    // Adapter for the earthquake list
     private EarthQuakeAdapter adapter;
 
+
+    // URL for earthquake data
     public static  final String USGS_REQUEST_URL ="https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10";
+
+
+    // TextView when the list is empty
+    private TextView emptyStateTextView;
+
 
 
     /***
@@ -55,13 +66,28 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
 
     @Override
     public Loader<List<Earthquake>> onCreateLoader(int i,Bundle bundle) {
+        Log.e("Activity","oncreatingLoader()");
+
         return new EarthquakeLoader(this,USGS_REQUEST_URL);
     }
 
     @Override
     public void onLoadFinished(Loader<List<Earthquake>> loader, List<Earthquake> data) {
+        Log.e("Activity","onLoadFinished()");
+
+        // Loading Progress bar
+        View loadingIndicator = findViewById(R.id.loading_indicator);
+        loadingIndicator.setVisibility(View.GONE);
+
+        //Set empty state for when we can't retrieve the data
+        emptyStateTextView.setText(R.string.no_earthquakes);
+
+
+
+        // clear the adapter of previous earthquake data
         adapter.clear();
 
+        // update the listview if there is a valid list of earthquakes
         if(data != null && !data.isEmpty()){
             adapter.addAll(data);
         }
@@ -69,12 +95,16 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
 
     @Override
     public void onLoaderReset(Loader<List<Earthquake>> loader) {
+        Log.e("Activity","onLoaderReset()");
+
         adapter.clear();
     }
 
     /*
             Loader End
      */
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,8 +114,16 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
 
 
 
+
         // Find a reference to the {@link ListView} in the layout
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
+
+
+
+
+        // Create a textview for when the fetch doesnt get
+        emptyStateTextView = findViewById(R.id.empty_view);
+        earthquakeListView.setEmptyView(emptyStateTextView);
 
         // Create a new {@link ArrayAdapter} of earthquakes
         adapter = new EarthQuakeAdapter(this, new ArrayList<Earthquake>());
