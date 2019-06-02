@@ -110,6 +110,13 @@ public class CatalogActivity extends AppCompatActivity {
     }
 
 
+    // When we refresh after coming back from saving the entry
+    @Override
+    protected void onStart() {
+        super.onStart();
+        displayDatabaseInfo();
+    }
+
     private void displayDatabaseInfo(){
 
 
