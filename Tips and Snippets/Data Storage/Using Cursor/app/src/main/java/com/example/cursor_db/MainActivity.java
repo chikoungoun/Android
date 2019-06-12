@@ -96,6 +96,20 @@ public class MainActivity extends AppCompatActivity {
             int ageColumnIndex = cursor.getColumnIndex(StudentEntry.COLUMN_STUDENT_AGE);
 
             // iterating through the rows of the cursor
+            while(cursor.moveToNext()){
+
+                // get the value from each index
+                int currentID = cursor.getInt(idColumnIndex);
+                String currentFirstname = cursor.getString(firstnameColumnIndex);
+                String currentLastname = cursor.getString(lastnameColumnIndex);
+                int currentAge = cursor.getInt(ageColumnIndex);
+
+                // Display the values of each row int the TextView
+                mText.append("\n "+currentID+" - "+
+                        currentFirstname+" - "+
+                        currentLastname+" - "+
+                        currentAge);
+            }
 
         }finally {
             // always close the cursor at the end
