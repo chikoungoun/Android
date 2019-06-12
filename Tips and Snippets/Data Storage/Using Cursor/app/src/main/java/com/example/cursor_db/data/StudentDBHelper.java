@@ -27,7 +27,7 @@ public class StudentDBHelper extends SQLiteOpenHelper {
         String SQL_CREATE_TABLE = "CREATE TABLE "+StudentEntry.TABLE_NAME+"("
                 +StudentEntry._ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
                 +StudentEntry.COLUMN_STUDENT_FIRSTNAME+" TEXT, "
-                +StudentEntry.COLUMN_STUDENT_LASTNAME+" TEXT NOT NULL "
+                +StudentEntry.COLUMN_STUDENT_LASTNAME+" TEXT NOT NULL, "
                 +StudentEntry.COLUMN_STUDENT_AGE+" INTEGER);";
 
         db.execSQL(SQL_CREATE_TABLE);

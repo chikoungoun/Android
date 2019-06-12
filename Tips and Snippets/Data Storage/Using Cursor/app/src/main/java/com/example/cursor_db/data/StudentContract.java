@@ -16,8 +16,8 @@ public final class StudentContract {
 
         // Table column names (create a unique ID)
         public static final String _ID = BaseColumns._ID;
-        public static final String COLUMN_STUDENT_FIRSTNAME = "First name";
-        public static final String COLUMN_STUDENT_LASTNAME = "Last name";
+        public static final String COLUMN_STUDENT_FIRSTNAME = "First_name";
+        public static final String COLUMN_STUDENT_LASTNAME = "Last_name";
         public static final String COLUMN_STUDENT_AGE = "Age";
 
 
