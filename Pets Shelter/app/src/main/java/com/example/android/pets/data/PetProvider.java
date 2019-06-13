@@ -32,9 +32,9 @@ public class PetProvider extends ContentProvider {
     //ACHTUNG!!!
     static {
 
-        sUriMatcher.addURI(PetContract.CONTENT_AUTHORITY,PetContract.PATH_PETS,PETS);
+        sUriMatcher.addURI(PetContract.CONTENT_AUTHORITY, PetContract.PATH_PETS, PETS);
 
-        sUriMatcher.addURI(PetContract.CONTENT_AUTHORITY, PetContract.PATH_PETS+"/#",PET_ID);
+        sUriMatcher.addURI(PetContract.CONTENT_AUTHORITY, PetContract.PATH_PETS + "/#", PET_ID);
     }
 
     private PetDbHelper mDbHelper;
@@ -56,44 +56,61 @@ public class PetProvider extends ContentProvider {
     //Perform the query for the given URI. Use the given projection, selection, selection arguments, and sort order.
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs,
-                         String sortOrder) {
+                        String sortOrder) {
 
         SQLiteDatabase database = mDbHelper.getReadableDatabase();
 
         Cursor cursor;
 
         int match = sUriMatcher.match(uri);
-        switch(match){
+        switch (match) {
             // getting all the table
             case PETS:
-                Log.e("PetProvider","SELECT *");
+                Log.e("PetProvider", "SELECT *");
                 cursor = database.query(PetEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
                 break;
-                //getting a specific entry
+            //getting a specific entry
             case PET_ID:
-                selection = PetEntry._ID +"=?";
+                selection = PetEntry._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 cursor = database.query(PetEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
                 break;
             default:
-                throw new IllegalArgumentException("Cannot query unknown URI "+uri);
+                throw new IllegalArgumentException("Cannot query unknown URI " + uri);
         }
 
         return cursor;
     }
 
 
-    //Returns the MIME type of data for the content URI.
-    @Override
-    public String getType( Uri uri) {
-        return null;
-    }
-
-
     // Insert new data into the provider with the given ContentValues.
     @Override
-    public Uri insert(Uri uri,ContentValues values) {
-        return null;
+    public Uri insert(Uri uri, ContentValues values) {
+
+        final int match = sUriMatcher.match(uri);
+        switch (match) {
+            case PETS:
+                return insertPet(uri, values);
+            default:
+                throw new IllegalArgumentException(("Insertion is not supported for " + uri));
+        }
+
+    }
+
+    private Uri insertPet(Uri uri, ContentValues values){
+
+        //TODO:
+        SQLiteDatabase database = mDbHelper.getWritableDatabase();
+
+        //Insert the new pet with the given values
+        long id = database.insert(PetEntry.TABLE_NAME,null,values);
+
+        //if ID is -1, then the insertion failed.
+        if(id == -1){
+            Log.e(LOG_TAG,"Failed to insert row for "+uri);
+        }
+
+        return ContentUris.withAppendedId(uri,id);
     }
 
     // Updates the data at the given selection and selection arguments, with the new ContentValues.
@@ -105,7 +122,13 @@ public class PetProvider extends ContentProvider {
 
     //Delete the data at the given selection and selection arguments.
     @Override
-    public int delete(Uri uri,String selection, String[] selectionArgs) {
+    public int delete(Uri uri, String selection, String[] selectionArgs) {
         return 0;
+    }
+
+    //Returns the MIME type of data for the content URI.
+    @Override
+    public String getType(Uri uri) {
+        return null;
     }
 }
