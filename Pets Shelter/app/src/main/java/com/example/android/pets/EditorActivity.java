@@ -40,7 +40,7 @@ import com.example.android.pets.data.PetDbHelper;
 public class EditorActivity extends AppCompatActivity {
 
     // Instanciate SQLiteHelper
-    private PetDbHelper mDbHelper = new PetDbHelper(this);
+    private PetDbHelper mDbHelper;
 
     /** EditText field to enter the pet's name */
     private EditText mNameEditText;

@@ -30,6 +30,7 @@ import android.widget.TextView;
 
 import com.example.android.pets.data.PetContract.PetEntry;
 import com.example.android.pets.data.PetDbHelper;
+import com.example.android.pets.data.PetProvider;
 
 /**
  * Displays list of pets that were entered and stored in the app.
@@ -38,7 +39,7 @@ public class CatalogActivity extends AppCompatActivity {
 
 
     // Instanciate SQLiteHelper
-    private PetDbHelper mDbHelper = new PetDbHelper(this);
+    private PetDbHelper mDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,9 +105,6 @@ public class CatalogActivity extends AppCompatActivity {
     private void displayDatabaseInfo(){
 
 
-        // Create and open a databse
-        SQLiteDatabase db = mDbHelper.getReadableDatabase();
-
         String[] projection = {
                 PetEntry._ID,
                 PetEntry.COLUMN_PET_NAME,
@@ -115,15 +113,15 @@ public class CatalogActivity extends AppCompatActivity {
                 PetEntry.COLUMN_PET_WEIGHT
         };
 
+
+
         // instanciate a new cursor
-        Cursor cursor = db.query(
-                PetEntry.TABLE_NAME,
-                projection,
-                null,
-                null,
-                null,
-                null,
-                null);
+        Cursor cursor = getContentResolver().query(
+                PetEntry.CONTENT_URI, // The content URI
+                projection,          // columns to return
+                null,               // selection criteria
+                null,               // selection criteria
+                null);              // The sort Order
 
         TextView displayView = (TextView) findViewById(R.id.text_view_pet);
 
