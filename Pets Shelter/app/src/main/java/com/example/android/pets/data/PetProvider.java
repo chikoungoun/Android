@@ -97,6 +97,7 @@ public class PetProvider extends ContentProvider {
 
     }
 
+    // Helper method for the insert()
     private Uri insertPet(Uri uri, ContentValues values){
 
         /*
@@ -139,17 +140,107 @@ public class PetProvider extends ContentProvider {
         return ContentUris.withAppendedId(uri,id);
     }
 
+    /*
+            Updating data
+     */
     // Updates the data at the given selection and selection arguments, with the new ContentValues.
     @Override
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
-        return 0;
+
+        final int match = sUriMatcher.match(uri);
+        switch (match){
+            case PETS:
+                return updatePet(uri, values, selection,selectionArgs);
+            case PET_ID:
+
+                selection = PetEntry._ID+"=?";
+                selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
+                return updatePet(uri,values, selection,selectionArgs);
+                default:
+                    throw new IllegalArgumentException(("Update is not supported for "+uri));
+
+        }
     }
 
+    private int updatePet(Uri uri, ContentValues values, String selection, String[] selectionArgs){
 
+        // TODO: Update the selected pets in the pets database table with the given ContentValues
+         /*
+                Sanity check
+         */
+
+         //Check if the link PetEntry#COLUMN_PET_NAME key is present
+        if(values.containsKey(PetEntry.COLUMN_PET_NAME)){
+            // Check that the name is not null
+            String name = values.getAsString(PetEntry.COLUMN_PET_NAME);
+            if(name == null){
+                throw new IllegalArgumentException("Pet requires a name");
+            }
+        }
+
+
+        //Check if the link PetEntry#COLUMN_PET_GENDER key is present
+        if(values.containsKey(PetEntry.COLUMN_PET_GENDER)){
+            //Checking the Gender is equal to one of the available data
+            Integer gender = values.getAsInteger(PetEntry.COLUMN_PET_GENDER);
+            if(gender == null || !PetEntry.isValidGenger(gender)){
+                throw new IllegalArgumentException("Pet requires valid gender");
+            }
+        }
+
+
+        //Check if the link PetEntry#COLUMN_PET_WEIGHT key is present
+        if(values.containsKey(PetEntry.COLUMN_PET_WEIGHT)){
+            //Checking the weight. Can be null but not negative
+            Integer weight = values.getAsInteger(PetEntry.COLUMN_PET_WEIGHT);
+            if(weight < 0 && weight != null){
+                throw new IllegalArgumentException("Pet weight requires a valid weight");
+            }
+        }
+
+
+        // No need to check the breed
+
+        /*
+        Don't try to update if there are no values to update
+         */
+        if(values.size() == 0){
+            return 0;
+        }
+
+        /*
+        Don't try to update if there are no values to update
+         */
+        SQLiteDatabase database = mDbHelper.getWritableDatabase();
+
+        /*
+        Return the number of database rows affected by the update
+         */
+        return database.update(PetEntry.TABLE_NAME,values,selection,selectionArgs);
+    }
+
+    /*
+            Deleting data
+     */
     //Delete the data at the given selection and selection arguments.
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
-        return 0;
+
+        SQLiteDatabase database = mDbHelper.getWritableDatabase();
+
+        final int match = sUriMatcher.match(uri);
+        switch (match){
+            case PETS:
+                //delete all rows that matches the selection and selection args
+                return database.delete(PetEntry.TABLE_NAME, selection, selectionArgs);
+            case PET_ID:
+                //delete a single row given the ID in the URI
+                selection = PetEntry._ID+"=?";
+                selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
+                return database.delete(PetEntry.TABLE_NAME,selection,selectionArgs);
+                default:
+                    throw new IllegalArgumentException("Deletion is not suported for "+uri);
+        }
     }
 
     //Returns the MIME type of data for the content URI.
