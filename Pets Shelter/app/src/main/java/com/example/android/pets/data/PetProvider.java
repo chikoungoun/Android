@@ -111,7 +111,7 @@ public class PetProvider extends ContentProvider {
 
         //Checking the Gender is equal to one of the available data
         Integer gender = values.getAsInteger(PetEntry.COLUMN_PET_GENDER);
-        if(gender == null || !PetEntry.isValidGenger(gender)){
+        if(gender == null || !PetEntry.isValidGender(gender)){
             throw new IllegalArgumentException("Pet requires valid gender");
         }
 
@@ -183,7 +183,7 @@ public class PetProvider extends ContentProvider {
         if(values.containsKey(PetEntry.COLUMN_PET_GENDER)){
             //Checking the Gender is equal to one of the available data
             Integer gender = values.getAsInteger(PetEntry.COLUMN_PET_GENDER);
-            if(gender == null || !PetEntry.isValidGenger(gender)){
+            if(gender == null || !PetEntry.isValidGender(gender)){
                 throw new IllegalArgumentException("Pet requires valid gender");
             }
         }
@@ -246,6 +246,15 @@ public class PetProvider extends ContentProvider {
     //Returns the MIME type of data for the content URI.
     @Override
     public String getType(Uri uri) {
-        return null;
+
+        final int match = sUriMatcher.match(uri);
+        switch (match){
+            case PETS:
+                return PetEntry.CONTENT_LIST_TYPE;
+            case PET_ID:
+                return PetEntry.CONTENT_ITEM_TYPE;
+                default:
+                    throw new IllegalStateException("Unknown URI "+uri+" witch match "+match);
+        }
     }
 }
