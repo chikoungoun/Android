@@ -58,10 +58,12 @@ public class CatalogActivity extends AppCompatActivity {
             }
         });
 
-        mDbHelper = new PetDbHelper(this);
+        // Find the listview populated with the pet data
+        ListView petListView = (ListView) findViewById(R.id.list);
 
-        displayDatabaseInfo();
-
+        //Find and set empty view on the listView if there are no data
+        View emptyView = findViewById(R.id.empty_view);
+        petListView.setEmptyView(emptyView);
 
     }
 
@@ -127,6 +129,7 @@ public class CatalogActivity extends AppCompatActivity {
 
         // Find the listview populated with the pet data
         ListView petListView = (ListView) findViewById(R.id.list);
+
 
         //setup an adapter to create a list for each row of pet data in the cursor
         PetCursorAdapter adapter = new PetCursorAdapter(this,cursor);
