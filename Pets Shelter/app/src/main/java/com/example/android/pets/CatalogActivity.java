@@ -19,6 +19,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.android.pets.data.PetContract.PetEntry;
@@ -123,59 +125,23 @@ public class CatalogActivity extends AppCompatActivity {
                 null,               // selection criteria
                 null);              // The sort Order
 
-        TextView displayView = (TextView) findViewById(R.id.text_view_pet);
+        // Find the listview populated with the pet data
+        ListView petListView = (ListView) findViewById(R.id.list);
 
+        //setup an adapter to create a list for each row of pet data in the cursor
+        PetCursorAdapter adapter = new PetCursorAdapter(this,cursor);
 
-        try{
-
-            // Displaying the number of observations and the structure in the activity_catalog.xml
-            displayView.setText(" The set table contains "+ cursor.getCount()+" pets.\n\n");
-            displayView.append(PetEntry._ID+" - "+
-                    PetEntry.COLUMN_PET_NAME+" - "+
-                    PetEntry.COLUMN_PET_BREED+" - "+
-                    PetEntry.COLUMN_PET_GENDER+" - "+
-                    PetEntry.COLUMN_PET_WEIGHT+"\n");
-
-            // Index of each column in the cursor
-            int idColumnIndex  = cursor.getColumnIndex(PetEntry._ID);
-            int nameColumnIndex = cursor.getColumnIndex(PetEntry.COLUMN_PET_NAME);
-            int breedColumnIndex = cursor.getColumnIndex(PetEntry.COLUMN_PET_BREED);
-            int genderColumnIndex = cursor.getColumnIndex(PetEntry.COLUMN_PET_GENDER);
-            int weightColumnIndex = cursor.getColumnIndex(PetEntry.COLUMN_PET_WEIGHT);
-
-            //iterate through the rows from the cursor
-            while(cursor.moveToNext()){
-
-                // get the value from each index
-                int currentID = cursor.getInt(idColumnIndex);
-                String currentName = cursor.getString(nameColumnIndex);
-                String currentBreed = cursor.getString(breedColumnIndex);
-                int currentGender = cursor.getInt(genderColumnIndex);
-                int currentWeight = cursor.getInt(weightColumnIndex);
-
-                //Display the values of each row in the textView
-                displayView.append("\n"+currentID+" - "+
-                        currentName+" - "+
-                        currentBreed+" - "+
-                        currentGender+" - "+
-                        currentWeight);
-
-
-            }
-
-
-        }finally {
-            // closing the cursor
-            cursor.close();
-
-        }
+        //attach the adapter to the list
+        petListView.setAdapter(adapter);
 
         }
 
     // Add a pet to the database
     private void insertPet(){
 
-        SQLiteDatabase db = mDbHelper.getWritableDatabase();
+        /*
+        *   New version using a contentResolver
+        * */
         ContentValues values = new ContentValues();
 
         values.put(PetEntry.COLUMN_PET_NAME,"Toto");
@@ -184,8 +150,7 @@ public class CatalogActivity extends AppCompatActivity {
         values.put(PetEntry.COLUMN_PET_WEIGHT,7);
 
 
-        long newRowId = db.insert(PetEntry.TABLE_NAME,null,values);
-        Log.e("CatalogActivity","New row ID : "+newRowId);
+        Uri newUri = getContentResolver().insert(PetEntry.CONTENT_URI,values);
 
 
     }
