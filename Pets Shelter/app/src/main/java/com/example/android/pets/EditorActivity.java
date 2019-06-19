@@ -103,6 +103,10 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         if(mCurrentPetUri == null){
             // new pet, so we change the title
             setTitle(getString(R.string.editor_activity_title_new_pet));
+
+            // Invalidate the options menu, so the "Delete" menu option can be hidden.
+            // (It doesn't make sense to delete a pet that hasn't been created yet.)
+            invalidateOptionsMenu();
         }else{
             setTitle(getString(R.string.editor_activity_title_edit_pet));
 
@@ -213,27 +217,27 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                         Toast.LENGTH_SHORT).show();
             }
         }else{
-                // Otherwise this is an EXISTING pet, so update the pet with content URI: mCurrentPetUri
-                // and pass in the new ContentValues. Pass in null for the selection and selection args
-                // because mCurrentPetUri will already identify the correct row in the database that
-                // we want to modify.
-                int rowsAffected = getContentResolver().update(mCurrentPetUri, values, null, null);
+            // Otherwise this is an EXISTING pet, so update the pet with content URI: mCurrentPetUri
+            // and pass in the new ContentValues. Pass in null for the selection and selection args
+            // because mCurrentPetUri will already identify the correct row in the database that
+            // we want to modify.
+            int rowsAffected = getContentResolver().update(mCurrentPetUri, values, null, null);
 
-                // Show a toast message depending on whether or not the update was successful.
-                if (rowsAffected == 0) {
-                    // If no rows were affected, then there was an error with the update.
-                    Toast.makeText(this, getString(R.string.editor_update_pet_failed),
-                            Toast.LENGTH_SHORT).show();
-                } else {
-                    // Otherwise, the update was successful and we can display a toast.
-                    Toast.makeText(this, getString(R.string.editor_update_pet_successful),
-                            Toast.LENGTH_SHORT).show();
-                }
+            // Show a toast message depending on whether or not the update was successful.
+            if (rowsAffected == 0) {
+                // If no rows were affected, then there was an error with the update.
+                Toast.makeText(this, getString(R.string.editor_update_pet_failed),
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                // Otherwise, the update was successful and we can display a toast.
+                Toast.makeText(this, getString(R.string.editor_update_pet_successful),
+                        Toast.LENGTH_SHORT).show();
             }
-
-
-
         }
+
+
+
+    }
 
 
 
@@ -367,7 +371,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
 
     /*
-    ****************************
+     ****************************
      */
 
     //Create the dialog Box
@@ -415,5 +419,16 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
         // Show dialog that there are unsaved changes
         showUnsavedChangesDialog(discardButtonClickListener);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+        // If this is a new pet, hide the "Delete" menu item.
+        if (mCurrentPetUri == null) {
+            MenuItem menuItem = menu.findItem(R.id.action_delete);
+            menuItem.setVisible(false);
+        }
+        return true;
     }
 }
