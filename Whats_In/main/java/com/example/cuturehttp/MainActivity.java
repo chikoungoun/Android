@@ -2,6 +2,7 @@ package com.example.cuturehttp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -13,21 +14,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        TextView noms = (TextView)findViewById(R.id.noms);
-        TextView dates = (TextView)findViewById(R.id.dates);
-
+        //Extraire les données du JSON
         ArrayList<Spectacle> spectacles = QueryUtils.extractSpectacles();
 
-        String names = "";
-        String ddates = "";
+        ListView listView = (ListView)findViewById(R.id.list);
 
-        for (Spectacle i : spectacles) {
-            names = names + i.getNom();
-            ddates = ddates + i.getDate();
-        }
+        SpectacleAdapter adapter = new SpectacleAdapter(this,spectacles);
 
-        noms.setText(names);
-        dates.setText(ddates);
+        listView.setAdapter(adapter);
     }
 }
