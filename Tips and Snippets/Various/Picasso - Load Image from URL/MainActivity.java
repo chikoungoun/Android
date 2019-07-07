@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class MainActivity extends Activity {
 
 
-    ImageView imageView;
+
     String url ="https://i.imgur.com/jp2n5qj.jpg";
 
     @Override
@@ -34,10 +34,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scrim_layout);
 
-        imageView = (ImageView) findViewById(R.id.img);
+        ImageView imageView = (ImageView) findViewById(R.id.img);
 
-        Picasso.with(this).load(url).into(imageView);
-
+        Picasso.with(this).load(url).resize(600,200).into(imageView);
 
 
     }
