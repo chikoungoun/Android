@@ -5,12 +5,14 @@ public class Spectacle {
     private String nom;
     private String date;
     private String heure;
+    private String image;
 
 
-    public Spectacle(String name, String date, String heure) {
+    public Spectacle(String name, String date, String heure,String image) {
         this.nom = name;
         this.date = date;
         this.heure = heure;
+        this.image = image;
     }
 
     public String getNom() {
@@ -23,5 +25,9 @@ public class Spectacle {
 
     public String getHeure() {
         return heure;
+    }
+
+    public String getImage() {
+        return image;
     }
 }
