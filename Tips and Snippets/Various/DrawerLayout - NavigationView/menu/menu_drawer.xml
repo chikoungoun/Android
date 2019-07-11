@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/drawer_news"
+            android:icon="@drawable/extension_black_24dp"
+            android:title="news"></item>
+
+    </group>
+
+    <item android:title="Configuration">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/drawer_profile"
+                    android:icon="@drawable/face_black_24dp"
+                    android:title="Profil"></item>
+
+                <item android:id="@+id/drawer_settings"
+                    android:icon="@drawable/settings_black_24dp"
+                    android:title="Settings"></item>
+            </group>
+        </menu>
+    </item>
+
+</menu>
