@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 
 
@@ -56,8 +58,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        return false;
+    public boolean onNavigationItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        switch (id){
+            case R.id.drawer_news:
+                Toast.makeText(this,"News Page",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.drawer_profile:
+                Toast.makeText(this,"Profile Page",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.drawer_settings:
+                Toast.makeText(this,"Settings Page",Toast.LENGTH_SHORT).show();
+                break;
+                default:
+                    break;
+        }
+
+        //Exit the Navigation View after the choice
+        drawerLayout.closeDrawer(GravityCompat.START);
+
+        return true;
     }
 
     @Override
