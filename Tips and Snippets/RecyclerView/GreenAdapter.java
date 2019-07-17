@@ -11,14 +11,15 @@ import android.widget.TextView;
 
 public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHolder> {
 
-
-
     private static final String TAG = GreenAdapter.class.getSimpleName();
+
+    private static int viewHolderCount;
 
     private int numberItems;
 
     public GreenAdapter(int numberItems) {
         this.numberItems = numberItems;
+        viewHolderCount =0;
     }
 
 
@@ -30,6 +31,17 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
         View view = inflater.inflate(R.layout.number_list_item,viewGroup,attachToParent);
         NumberViewHolder viewHolder = new NumberViewHolder(view);
+
+        viewHolder.viewHolderIndex.setText("ViewHolder index :"+viewHolderCount);
+
+        // Get the color from the ColorUtils and set it
+       int backgroundColorForViewHolder = ColorUtils.getViewHolderBackgroundColorFromInstance(context,viewHolderCount);
+
+       viewHolder.itemView.setBackgroundColor(backgroundColorForViewHolder);
+
+       // increment the viewHolderCount
+        viewHolderCount++;
+        Log.d(TAG,"onCreateViewHolder : number of ViewHolders created: "+viewHolderCount);
 
         return viewHolder;
     }
@@ -57,10 +69,14 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
         TextView listItemNumberView;
 
+        TextView viewHolderIndex;
+
         public NumberViewHolder( View itemView) {
             super(itemView);
 
             listItemNumberView = (TextView)itemView.findViewById(R.id.tv_item_number);
+
+           viewHolderIndex =(TextView)itemView.findViewById(R.id.tv_view_holder_instance);
         }
 
         void bind(int listIndex){
