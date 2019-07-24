@@ -67,7 +67,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        
+
+
+        DividerItemDecoration itemDecor = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(itemDecor);
 
     }
 
