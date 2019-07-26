@@ -5,9 +5,15 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     GridView gridView;
+
+    ImageAdapter adapter;
+
+    ArrayList<Integer> pokemons = new ArrayList<Integer>();
 
     static final String[] letters = new String[] {
             "A", "B", "C", "D", "E",
@@ -22,8 +28,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         gridView =(GridView) findViewById(R.id.gridview);
+        gridView.setNumColumns(3);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,letters);
+        pokemons.add(R.drawable.pikachu);
+        pokemons.add(R.drawable.squirtle);
+        pokemons.add(R.drawable.charmander);
+        pokemons.add(R.drawable.bulbasaur);
+        pokemons.add(R.drawable.huitre);
+        pokemons.add(R.drawable.gengar);
+
+
+
+        adapter = new ImageAdapter(this,pokemons);
 
         gridView.setAdapter(adapter);
 
