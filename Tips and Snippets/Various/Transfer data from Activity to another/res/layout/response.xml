@@ -16,4 +16,24 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:text="TextView" />
+
+    <TextView
+        android:id="@+id/wut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wuuuuut ?"
+        android:layout_below="@id/answer"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/answer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wut"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="TextView"
+        />
+
 </RelativeLayout>

@@ -15,8 +15,12 @@ public class ResponseActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String message = intent.getStringExtra("message");
+        String again = intent.getStringExtra("again");
         TextView textResponse = (TextView)findViewById(R.id.answer);
+        TextView textResponse2 = (TextView)findViewById(R.id.answer2);
+
         textResponse.setText(message);
+        textResponse2.setText(again);
 
     }
 }

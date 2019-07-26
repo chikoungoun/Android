@@ -12,6 +12,13 @@
         android:layout_height="wrap_content"
         android:text="Bouyaka"
         android:layout_margin="48dp"/>
+    <TextView
+        android:id="@+id/text_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view"
+        android:text="Repeat"
+        android:layout_margin="48dp"/>
 
     <Button
         android:id="@+id/button"

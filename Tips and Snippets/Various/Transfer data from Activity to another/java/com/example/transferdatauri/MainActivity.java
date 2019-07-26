@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button)findViewById(R.id.button);
         final TextView textView = (TextView)findViewById(R.id.text_view);
 
+        final TextView textView2 = (TextView)findViewById(R.id.text_view2);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this,ResponseActivity.class);
                 intent.putExtra("message",textView.getText());
+                intent.putExtra("again",textView2.getText());
                 startActivity(intent);
 
             }
