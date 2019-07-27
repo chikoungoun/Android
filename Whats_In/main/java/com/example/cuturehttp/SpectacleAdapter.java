@@ -44,7 +44,7 @@ public class SpectacleAdapter extends ArrayAdapter<Spectacle> {
         Picasso.with(getContext()).load(spec.getImage()).resize(300,300).into(imageView);
 
         //test url
-        Log.e("test url",spec.getImage());
+        //Log.e("test url",spec.getImage());
 
         return convertView;
     }

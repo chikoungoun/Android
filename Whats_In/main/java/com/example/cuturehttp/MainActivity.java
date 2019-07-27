@@ -1,8 +1,12 @@
 package com.example.cuturehttp;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -28,6 +32,19 @@ public class MainActivity extends AppCompatActivity {
 
         SpectacleAsyncTask task = new SpectacleAsyncTask();
         task.execute(SPEC_JSON);
+
+        //Item Listener
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                // Envoyer le nom de l'évènement vers une autre activity
+                // pour l'afficher dans detail_page.xml
+                Intent intent = new Intent(MainActivity.this,DetailActivity.class);
+                intent.putExtra("nom",adapter.getItem(position).getNom());// n'envoyer que le nom
+                startActivity(intent);
+            }
+        });
 
     }
 
