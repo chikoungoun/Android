@@ -13,13 +13,20 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_page);
 
+        //recevoir les infos à travers l'intent depuis MainActivity
         Intent intent = getIntent();
-        String nom = intent.getStringExtra("nom");//recevoir le nom à travers l'intent depuis MainActivity
+        String nom = intent.getStringExtra("nom");
+        String date = intent.getStringExtra("date");
+        String heure = intent.getStringExtra("heure");
 
         TextView textNom = (TextView)findViewById(R.id.spectacle);
+        TextView textDate = (TextView)findViewById(R.id.date);
+        TextView textHeure = (TextView)findViewById(R.id.heure);
 
 
         textNom.setText(nom);
+        textDate.setText(date);
+        textHeure.setText(heure);
 
 
 

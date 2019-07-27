@@ -38,10 +38,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                // Envoyer le nom de l'évènement vers une autre activity
+                // Envoyer les infos de l'évènement vers une autre activity
                 // pour l'afficher dans detail_page.xml
                 Intent intent = new Intent(MainActivity.this,DetailActivity.class);
-                intent.putExtra("nom",adapter.getItem(position).getNom());// n'envoyer que le nom
+                intent.putExtra("nom",adapter.getItem(position).getNom());
+                intent.putExtra("date",adapter.getItem(position).getDate());
+                intent.putExtra("heure",adapter.getItem(position).getHeure());
                 startActivity(intent);
             }
         });
