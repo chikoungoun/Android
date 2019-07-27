@@ -126,8 +126,10 @@ public class QueryUtils {
                 String date = jObject.getString("date");
                 String heure = jObject.getString("heure");
                 String image = jObject.getString("image");
+                String webLien = jObject.getString("lien");
+                String lieu = jObject.getString("lieu");
 
-                Spectacle spectacle = new Spectacle(nom,date,heure,image);
+                Spectacle spectacle = new Spectacle(nom,date,heure,image,lieu,webLien);
 
                 spectacles.add(spectacle);
             }

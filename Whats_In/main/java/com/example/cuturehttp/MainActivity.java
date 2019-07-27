@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private SpectacleAdapter adapter;
 
-    public static final String SPEC_JSON="https://raw.githubusercontent.com/chikoungoun/Android/master/Whats_In/main/tnm5_records";
+    public static final String SPEC_JSON="https://raw.githubusercontent.com/chikoungoun/Scraping/master/Maroc%20Culture/TNM5/tnm5_records";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("nom",adapter.getItem(position).getNom());
                 intent.putExtra("date",adapter.getItem(position).getDate());
                 intent.putExtra("heure",adapter.getItem(position).getHeure());
+                intent.putExtra("webLien",adapter.getItem(position).getWebLien());
+                intent.putExtra("lieu",adapter.getItem(position).getLieu());
                 startActivity(intent);
             }
         });
