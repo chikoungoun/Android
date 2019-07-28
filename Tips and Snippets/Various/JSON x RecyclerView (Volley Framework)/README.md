@@ -1,3 +1,5 @@
-# Android
+# RecyclerView with JSON and Volley Framework
 
-Following up the Android Udacity tutorials & making up my own Android code snippets database for an easier and faster reuse in projects
+Facilitating big troubles of JSON Parsing from this excellent tutorial : https://codinginflow.com/tutorials/android/recyclerview-volley-picasso/part-4-get-request
+
+All credits to him
