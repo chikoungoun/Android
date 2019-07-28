@@ -106,6 +106,8 @@ public class QueryUtils {
     //Extraire dans un array d'objet à partir du parsing du JSON
     public static ArrayList<Spectacle> extractFromJSON(String specJSON){
 
+
+        Log.e("QueryUtils","ExtractJSON");
         //si le texte JSON est null
         if(TextUtils.isEmpty(specJSON)){
             return null;
@@ -144,6 +146,8 @@ public class QueryUtils {
 
     // Fonction regroupement toutes les fonctionnalités
     public static List<Spectacle> fetchSpectacleData(String requestUrl){
+
+        Log.e("QueryUtils","fetchData");
 
         // créer l'objet URL
         URL url = createURL(requestUrl);
