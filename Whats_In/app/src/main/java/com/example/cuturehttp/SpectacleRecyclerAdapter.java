@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ public class SpectacleRecyclerAdapter extends RecyclerView.Adapter<SpectacleRecy
 
     private List<Spectacle> mSpectacles;
     private Context mContext;
+    private OnItemClickListener mListener;
 
     public SpectacleRecyclerAdapter(Context mContext,List<Spectacle> spectacles) {
         this.mContext = mContext;
@@ -25,18 +27,23 @@ public class SpectacleRecyclerAdapter extends RecyclerView.Adapter<SpectacleRecy
     }
 
 
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
+
 
     @Override
     public SpectacleRecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
 
-        Context context = viewGroup.getContext();
-        LayoutInflater inflater = LayoutInflater.from(context);
 
-        View spectacleView = inflater.inflate(R.layout.list_item,viewGroup,false);
 
-        ViewHolder viewHolder = new ViewHolder(spectacleView);
+        View v = LayoutInflater.from(mContext).inflate(R.layout.list_item,viewGroup,false);
 
-        return viewHolder;
+        return new ViewHolder(v);
     }
 
     @Override
@@ -87,6 +94,18 @@ public class SpectacleRecyclerAdapter extends RecyclerView.Adapter<SpectacleRecy
             dateTextview = itemView.findViewById(R.id.dates);
             heureTextview = itemView.findViewById(R.id.heures);
             imageView = itemView.findViewById(R.id.images);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mListener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 

@@ -27,11 +27,17 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SpectacleRecyclerAdapter.OnItemClickListener {
 
 
-
+    // JSON fiel link
     public static final String SPEC_JSON="https://raw.githubusercontent.com/chikoungoun/Scraping/master/Maroc%20Culture/TNM5/tnm5_records";
+
+    // Intent constants
+    public static final String EXTRA_NOM = "nom";
+    public static final String EXTRA_DATE = "date";
+    public static final String EXTRA_HEURE = "heure";
+    public static final String EXTRA_LIEU = "lieu";
 
     private SpectacleRecyclerAdapter adapter;
     private RecyclerView mRecyclerView;
@@ -46,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.list);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
 
         mSpectacleList = new ArrayList<>();
 
@@ -86,6 +94,9 @@ public class MainActivity extends AppCompatActivity {
                             adapter = new SpectacleRecyclerAdapter(MainActivity.this,mSpectacleList);
                             mRecyclerView.setAdapter(adapter);
 
+                            //Ajouter le ClickListener
+                            adapter.setOnItemClickListener(MainActivity.this);
+
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -102,5 +113,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemClick(int position) {
 
+        Intent detailIntent = new Intent(this,DetailActivity.class);
+        Spectacle clickedItem = mSpectacleList.get(position);
+
+        detailIntent.putExtra(EXTRA_NOM,clickedItem.getNom());
+        detailIntent.putExtra(EXTRA_DATE,clickedItem.getDate());
+        detailIntent.putExtra(EXTRA_HEURE,clickedItem.getHeure());
+        detailIntent.putExtra(EXTRA_LIEU,clickedItem.getLieu());
+
+        startActivity(detailIntent);
+
+
+    }
 }
