@@ -18,6 +18,15 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
     // Define Context and Arraylist
     private Context mContext;
     private ArrayList<ExampleItem> mExampleItem;
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
 
     public ExampleAdapter(Context mContext, ArrayList<ExampleItem> mExampleItem) {
         this.mContext = mContext;
@@ -70,6 +79,18 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
             imageView = itemView.findViewById(R.id.image_view);
             textViewName = itemView.findViewById(R.id.text_view_name);
             textViewLike = itemView.findViewById(R.id.text_view_like);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mListener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
 
 
 
