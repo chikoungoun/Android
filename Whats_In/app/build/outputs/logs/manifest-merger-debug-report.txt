@@ -1,0 +1,173 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:2:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\1c0cde82a32b8ef3771c6cdfe5f33eb5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\8bf39905b1b4c22c7305ccce11746007\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\26cfd2b2781ecc1a7fe3fe5b46767752\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\fb8b7afb967c24ba256a666d10cba1ad\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\caa52d594e57e8f37c93e77126d44219\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\6b2e61677f7f122acab15455d1d2da58\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\319d4e8034cd1bc888d6b019a9dcab78\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2e304a7ff736f23c355748ddde317afa\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2c74f8381217f4214f7291a4974ea6a2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\ef1c97b6d675ec2d6bb64d601edc4cb5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\0538b9d161482ce8d91c0eef11d6e974\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2729b1c00dd1ae204983bfe960c01593\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\a631829378417ecd17fe9112e1797529\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2e13a26cd2ca6614c66518d66b9c8f19\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\43d3034f4f0e057a25bfcf128a789478\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\3348da064caab3078e01d53efb8bc91b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\506ddf1dedf6aa458e26de8839c738d3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\fe36b210dae57031f0a63b8c1b58c6ee\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\b1285743eef58d2dd714671cdff2fe8c\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\4bfda76e88fcf95962e629139a4fecde\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\97988aed00bc1859ec46ddd62edde075\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\998b8c7bfa58b049b545e339d4f11e83\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\f8dfaf73addbad2312ca4c2e8dcaf461\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\01a4338b7898ca7f3d9478739548f00f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\60e2ee8e1096c71c5813e97564eda5c8\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\69f129b27593bb6010a36b742467765e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\3ba601a5b4500a89064bcdb9c9107bc4\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\ecab35aa69bda4ef7332c7860fb6e481\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\682f64768e9ad8865d55a0dc75b32fa3\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\23f9606683993e67b74260ae3da4ec8e\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:5:22-64
+application
+ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:7:5-22:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\8bf39905b1b4c22c7305ccce11746007\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\8bf39905b1b4c22c7305ccce11746007\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\caa52d594e57e8f37c93e77126d44219\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\caa52d594e57e8f37c93e77126d44219\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\b1285743eef58d2dd714671cdff2fe8c\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\b1285743eef58d2dd714671cdff2fe8c\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\4bfda76e88fcf95962e629139a4fecde\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\4bfda76e88fcf95962e629139a4fecde\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\b1285743eef58d2dd714671cdff2fe8c\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:11:9-54
+	android:icon
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:9:9-43
+	android:allowBackup
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:13:9-40
+activity#com.example.cuturehttp.DetailActivity
+ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:14:9-61
+	android:name
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:14:19-49
+activity#com.example.cuturehttp.MainActivity
+ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:15:9-21:20
+	android:name
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:15:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml:19:27-74
+uses-sdk
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\1c0cde82a32b8ef3771c6cdfe5f33eb5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\1c0cde82a32b8ef3771c6cdfe5f33eb5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\8bf39905b1b4c22c7305ccce11746007\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\8bf39905b1b4c22c7305ccce11746007\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\26cfd2b2781ecc1a7fe3fe5b46767752\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\26cfd2b2781ecc1a7fe3fe5b46767752\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\fb8b7afb967c24ba256a666d10cba1ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\fb8b7afb967c24ba256a666d10cba1ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\caa52d594e57e8f37c93e77126d44219\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\caa52d594e57e8f37c93e77126d44219\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\6b2e61677f7f122acab15455d1d2da58\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\6b2e61677f7f122acab15455d1d2da58\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\319d4e8034cd1bc888d6b019a9dcab78\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\319d4e8034cd1bc888d6b019a9dcab78\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2e304a7ff736f23c355748ddde317afa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2e304a7ff736f23c355748ddde317afa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2c74f8381217f4214f7291a4974ea6a2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2c74f8381217f4214f7291a4974ea6a2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\ef1c97b6d675ec2d6bb64d601edc4cb5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\ef1c97b6d675ec2d6bb64d601edc4cb5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\0538b9d161482ce8d91c0eef11d6e974\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\0538b9d161482ce8d91c0eef11d6e974\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2729b1c00dd1ae204983bfe960c01593\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2729b1c00dd1ae204983bfe960c01593\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\a631829378417ecd17fe9112e1797529\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\a631829378417ecd17fe9112e1797529\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2e13a26cd2ca6614c66518d66b9c8f19\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\2e13a26cd2ca6614c66518d66b9c8f19\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\43d3034f4f0e057a25bfcf128a789478\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\43d3034f4f0e057a25bfcf128a789478\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\3348da064caab3078e01d53efb8bc91b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\3348da064caab3078e01d53efb8bc91b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\506ddf1dedf6aa458e26de8839c738d3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\506ddf1dedf6aa458e26de8839c738d3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\fe36b210dae57031f0a63b8c1b58c6ee\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\fe36b210dae57031f0a63b8c1b58c6ee\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\b1285743eef58d2dd714671cdff2fe8c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\b1285743eef58d2dd714671cdff2fe8c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\4bfda76e88fcf95962e629139a4fecde\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\4bfda76e88fcf95962e629139a4fecde\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\97988aed00bc1859ec46ddd62edde075\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\97988aed00bc1859ec46ddd62edde075\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\998b8c7bfa58b049b545e339d4f11e83\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\998b8c7bfa58b049b545e339d4f11e83\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\f8dfaf73addbad2312ca4c2e8dcaf461\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\f8dfaf73addbad2312ca4c2e8dcaf461\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\01a4338b7898ca7f3d9478739548f00f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\01a4338b7898ca7f3d9478739548f00f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\60e2ee8e1096c71c5813e97564eda5c8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\60e2ee8e1096c71c5813e97564eda5c8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\69f129b27593bb6010a36b742467765e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\69f129b27593bb6010a36b742467765e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\3ba601a5b4500a89064bcdb9c9107bc4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\3ba601a5b4500a89064bcdb9c9107bc4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\ecab35aa69bda4ef7332c7860fb6e481\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\ecab35aa69bda4ef7332c7860fb6e481\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\682f64768e9ad8865d55a0dc75b32fa3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\682f64768e9ad8865d55a0dc75b32fa3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\23f9606683993e67b74260ae3da4ec8e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\marwane\.gradle\caches\transforms-2\files-2.1\23f9606683993e67b74260ae3da4ec8e\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\main\AndroidManifest.xml
