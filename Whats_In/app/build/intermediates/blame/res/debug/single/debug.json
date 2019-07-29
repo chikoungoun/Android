@@ -40,12 +40,12 @@
         "source": "C:\\Users\\marwane\\.gradle\\caches\\transforms-2\\files-2.1\\1c0cde82a32b8ef3771c6cdfe5f33eb5\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_calendar_today_black_48.png.flat",
-        "source": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_calendar_today_black_48.png"
-    },
-    {
         "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_dialog_title_material.xml.flat",
         "source": "C:\\Users\\marwane\\.gradle\\caches\\transforms-2\\files-2.1\\1c0cde82a32b8ef3771c6cdfe5f33eb5\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_calendar_today_black_48.png.flat",
+        "source": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_calendar_today_black_48.png"
     },
     {
         "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
@@ -128,12 +128,12 @@
         "source": "C:\\Users\\marwane\\.gradle\\caches\\transforms-2\\files-2.1\\b1285743eef58d2dd714671cdff2fe8c\\res\\layout\\notification_action.xml"
     },
     {
-        "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
-        "source": "C:\\Users\\marwane\\.gradle\\caches\\transforms-2\\files-2.1\\1c0cde82a32b8ef3771c6cdfe5f33eb5\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
-    },
-    {
         "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
+        "source": "C:\\Users\\marwane\\.gradle\\caches\\transforms-2\\files-2.1\\1c0cde82a32b8ef3771c6cdfe5f33eb5\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
     {
         "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
@@ -380,12 +380,12 @@
         "source": "C:\\Users\\marwane\\.gradle\\caches\\transforms-2\\files-2.1\\1c0cde82a32b8ef3771c6cdfe5f33eb5\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
-        "source": "C:\\Users\\marwane\\.gradle\\caches\\transforms-2\\files-2.1\\b1285743eef58d2dd714671cdff2fe8c\\res\\layout-v21\\notification_action.xml"
-    },
-    {
         "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_indicator_material.xml.flat",
         "source": "C:\\Users\\marwane\\.gradle\\caches\\transforms-2\\files-2.1\\1c0cde82a32b8ef3771c6cdfe5f33eb5\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
+        "source": "C:\\Users\\marwane\\.gradle\\caches\\transforms-2\\files-2.1\\b1285743eef58d2dd714671cdff2fe8c\\res\\layout-v21\\notification_action.xml"
     },
     {
         "merged": "C:\\Users\\marwane\\Documents\\Android_Projects\\CutureHttp\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_enter.xml.flat",

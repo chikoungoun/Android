@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="160dp"
+    android:layout_marginLeft="@dimen/spacing_8"
+    android:layout_marginRight="@dimen/spacing_8"
+    android:layout_marginTop="@dimen/spacing_8"
+    android:layout_marginBottom="@dimen/spacing_8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/spacing_8">
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/images"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/images"
+            android:paddingLeft="16dp"
+            android:layout_marginLeft="8dp"
+            android:paddingTop="16dp"
+
+            >
+
+            <TextView
+                android:id="@+id/noms"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                tools:text="noms"
+                style="@style/textItemTitle"
+                />
+
+            <TextView
+                android:id="@+id/dates"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                tools:text="dates"
+                style="@style/textItemNormal"
+                />
+
+            <TextView
+                android:id="@+id/heures"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                tools:text="heures"
+                style="@style/textItemNormal"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

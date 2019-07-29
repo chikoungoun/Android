@@ -2736,6 +2736,10 @@
         <item name="android:textSize">24sp</item>
     </style><style name="TextNormal" parent="TextAppearance.AppCompat.Medium">
         <item name="android:textSize">16sp</item>
+    </style><style name="textItemTitle">
+        <item name="android:textColor">@android:color/black</item>
+    </style><style name="textItemNormal">
+        <item name="android:textColor">@android:color/darker_gray</item>
     </style></file></source><source path="C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\build\generated\res\rs\debug"/><source path="C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\marwane\Documents\Android_Projects\CutureHttp\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>

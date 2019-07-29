@@ -746,7 +746,7 @@ id content
 id contentPanel
 id custom
 id customPanel
-id date
+id date_detail
 id dates
 id decor_content_parent
 id default_activity_button
@@ -764,7 +764,7 @@ id forever
 id gone
 id group_divider
 id groups
-id heure
+id heure_detail
 id heures
 id home
 id homeAsUp
@@ -772,13 +772,14 @@ id icon
 id icon_group
 id ifRoom
 id image
+id image_detail
 id images
 id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
 id left
-id lieu
+id lieu_detail
 id line1
 id line3
 id list
@@ -824,7 +825,7 @@ id showCustom
 id showHome
 id showTitle
 id spacer
-id spectacle
+id spectacle_detail
 id split_action_bar
 id spread
 id spread_inside
@@ -852,7 +853,7 @@ id topPanel
 id uniform
 id up
 id useLogo
-id webLien
+id webLien_detail
 id withText
 id wrap
 id wrap_content
@@ -1303,6 +1304,8 @@ style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style Widget_Support_CoordinatorLayout
+style textItemNormal
+style textItemTitle
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
