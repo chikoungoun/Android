@@ -8,15 +8,17 @@ public class Spectacle {
     private String image;
     private String webLien;
     private String lieu;
+    private String description;
 
 
-    public Spectacle(String name, String date, String heure,String image,String lieu,String webLien) {
+    public Spectacle(String name, String date, String heure,String image,String lieu,String webLien,String description) {
         this.nom = name;
         this.date = date;
         this.heure = heure;
         this.image = image;
         this.lieu = lieu;
         this.webLien = webLien;
+        this.description = description;
     }
 
     public String getNom() {
@@ -41,5 +43,9 @@ public class Spectacle {
 
     public String getLieu() {
         return lieu;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

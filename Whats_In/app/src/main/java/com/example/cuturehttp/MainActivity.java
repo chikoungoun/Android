@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements SpectacleRecycler
     public static final String EXTRA_LIEU = "lieu";
     public static final String EXTRA_WEBLIEN = "lien";
     public static final String EXTRA_IMAGE = "image";
+    public static final String EXTRA_DESCRIPTION = "description";
 
 
     private SpectacleRecyclerAdapter adapter;
@@ -88,8 +89,9 @@ public class MainActivity extends AppCompatActivity implements SpectacleRecycler
                                 String image = jObject.getString("image");
                                 String webLien = jObject.getString("lien");
                                 String lieu = jObject.getString("lieu");
+                                String description = jObject.getString("description");
 
-                                Spectacle spectacle = new Spectacle(nom,date,heure,image,lieu,webLien);
+                                Spectacle spectacle = new Spectacle(nom,date,heure,image,lieu,webLien,description);
 
                                 mSpectacleList.add(spectacle);
                             }
@@ -127,6 +129,7 @@ public class MainActivity extends AppCompatActivity implements SpectacleRecycler
         detailIntent.putExtra(EXTRA_HEURE,clickedItem.getHeure());
         detailIntent.putExtra(EXTRA_LIEU,clickedItem.getLieu());
         detailIntent.putExtra(EXTRA_WEBLIEN,clickedItem.getWebLien());
+        detailIntent.putExtra(EXTRA_DESCRIPTION,clickedItem.getDescription());
 
         detailIntent.putExtra(EXTRA_IMAGE,clickedItem.getImage());
 
