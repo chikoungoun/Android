@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="#ffff99"
     android:layout_margin="8dp"
     app:cardElevation="4dp"
     app:cardCornerRadius="4dp">
@@ -15,16 +14,20 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/spectacle"
+            android:id="@+id/spectacle_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="24sp"
             android:textStyle="bold"
             android:padding="16dp"
             android:text="Spectacle"
+            style="@style/TextTitle"
             />
 
+        <!-- Divider -->
         <View
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#d3d3d3 " />
@@ -37,52 +40,58 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/lieu"
+                android:id="@+id/lieu_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="12dp"
-                android:paddingTop="8dp"
-                android:paddingRight="16dp"
-                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/spacing_16"
+                android:paddingTop="@dimen/spacing_8"
+                android:paddingRight="@dimen/spacing_16"
+                android:paddingBottom="@dimen/spacing_8"
                 android:drawableLeft="@drawable/baseline_place_black_24"
-                android:drawablePadding="8dp"
-                android:text=" Lieu"/>
+                android:drawablePadding="@dimen/spacing_8"
+                style="@style/TextNormal"
+                android:text="Lieu"/>
 
             <TextView
-                android:id="@+id/date"
+                android:id="@+id/date_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="12dp"
-                android:paddingTop="8dp"
-                android:paddingRight="16dp"
-                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/spacing_16"
+                android:paddingTop="@dimen/spacing_8"
+                android:paddingRight="@dimen/spacing_16"
+                android:paddingBottom="@dimen/spacing_8"
                 android:drawableLeft="@drawable/baseline_calendar_today_black_24"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/spacing_8"
+                style="@style/TextNormal"
                 android:text="Date"/>
 
             <TextView
-                android:id="@+id/heure"
+                android:id="@+id/heure_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="12dp"
-                android:paddingTop="8dp"
-                android:paddingRight="16dp"
-                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/spacing_16"
+                android:paddingTop="@dimen/spacing_8"
+                android:paddingRight="@dimen/spacing_16"
+                android:paddingBottom="@dimen/spacing_8"
                 android:drawableLeft="@drawable/baseline_alarm_black_24"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/spacing_8"
+                style="@style/TextNormal"
                 android:text="Heure"/>
 
             <TextView
-                android:id="@+id/lien"
+                android:id="@+id/webLien_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="12dp"
-                android:paddingTop="8dp"
-                android:paddingRight="16dp"
-                android:paddingBottom="8dp"
+                android:clickable="true"
+                android:paddingLeft="@dimen/spacing_16"
+                android:paddingTop="@dimen/spacing_8"
+                android:paddingRight="@dimen/spacing_8"
+                android:paddingBottom="@dimen/spacing_8"
                 android:drawableLeft="@drawable/baseline_link_black_24"
-                android:drawablePadding="8dp"
-                android:text="Lien"/>
+                android:drawablePadding="@dimen/spacing_8"
+                style="@style/TextNormal"
+                android:text="Lien"
+                android:textColor="#0000ff"/>
 
         </LinearLayout>
 
