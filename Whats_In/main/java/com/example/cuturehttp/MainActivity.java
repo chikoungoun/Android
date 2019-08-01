@@ -2,6 +2,7 @@ package com.example.cuturehttp;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements SpectacleRecycler
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fake_main);
 
+
+        //RecyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.list);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
