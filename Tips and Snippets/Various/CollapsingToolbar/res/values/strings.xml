@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyToolbar</string>
+
+    <string name="loremIpsum"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum purus sit amet lorem convallis laoreet. Sed vel rhoncus neque. Duis aliquet, mi cursus eleifend faucibus, arcu diam commodo mauris, at gravida leo elit eu felis. Suspendisse vulputate libero quis tincidunt elementum. Pellentesque non efficitur est. Nullam facilisis ipsum at augue aliquet sodales. Donec iaculis odio non orci congue, nec vulputate lorem luctus. Ut sed placerat elit, non ultricies mi. Vestibulum ac dapibus odio. Nulla libero nulla, fermentum ut consectetur ac, tempus finibus enim. Aenean lectus tortor, laoreet et neque sit amet, cursus laoreet est. Ut tellus nulla, consequat nec pretium ut, placerat nec justo. Vestibulum dui erat, semper a ultrices eu, elementum rhoncus libero. Nunc a sem sit amet orci fringilla maximus.
+
+Nam ultricies ut eros vel vestibulum. Pellentesque vel ante dui. Cras viverra sapien non nisl blandit, tristique tempor dolor posuere. Fusce condimentum pellentesque orci eget volutpat. Nunc lobortis, leo sit amet lacinia iaculis, velit sem laoreet mi, eu scelerisque nulla ex eu nisl. Etiam egestas velit ac ante viverra ullamcorper. Sed eget sapien lacus.
+
+Phasellus mollis orci mauris, ut varius elit imperdiet nec. Nam lacus nisi, feugiat in lorem ut, cursus cursus urna. Nullam vel porttitor urna, ac lacinia augue. Phasellus fringilla, velit elementum posuere consequat, leo sapien sodales purus, in scelerisque dolor leo a nisi. Vestibulum porttitor facilisis massa ac interdum. Mauris nisl mi, cursus sit amet nisl sed, lobortis dignissim velit. Vestibulum finibus, justo ac auctor posuere, nulla turpis volutpat dolor, et vestibulum elit justo in nunc. Sed sed mauris ac arcu tempor consectetur a eu eros. Sed non finibus nunc. </string>
+</resources>
