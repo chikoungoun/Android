@@ -43,6 +43,7 @@
                 android:paddingRight="16dp"
                 android:paddingBottom="8dp"
                 android:text=" Description"
+                android:lineSpacingExtra="10sp"
                 style="@style/TextNormal"/>
 
         </LinearLayout>
