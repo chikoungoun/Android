@@ -19,5 +19,7 @@ public class MainActivity extends AppCompatActivity {
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitle("BOUYAKA");
 
+
+
     }
 }
