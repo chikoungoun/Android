@@ -71,7 +71,7 @@
         android:id="@+id/originAirport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/origin_code"
+        android:text="@string/origin_code"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintBottom_toBottomOf="@id/divider"
         app:layout_constraintRight_toRightOf="@id/leftRectangle"
@@ -79,7 +79,7 @@
         app:layout_constraintLeft_toLeftOf="@id/leftRectangle"/>
 
     <TextView
-        tools:text="@string/destination_code"
+        android:text="@string/destination_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/destinationAirport"
@@ -97,7 +97,7 @@
         android:id="@+id/boardingTimeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/boarding_time_label"
+        android:text="@string/boarding_time_label"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         android:letterSpacing="0.3"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -108,7 +108,7 @@
 
     <TextView
         android:id="@+id/boardingTime"
-        tools:text="@string/boarding_time"
+        android:text="@string/boarding_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -121,7 +121,7 @@
         android:id="@+id/departureTimeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/departure_time_label"
+        android:text="@string/departure_time_label"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintLeft_toLeftOf="@id/boardingTime"
         app:layout_constraintTop_toBottomOf="@id/boardingTime"
@@ -131,7 +131,7 @@
 
     <TextView
         android:id="@+id/departureTime"
-        tools:text="@string/departure_time"
+        android:text="@string/departure_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -144,7 +144,7 @@
         <!-- Boarding In -->
     <TextView
         android:id="@+id/BoardingInTimeLabel"
-        tools:text="@string/boarding_time_label"
+        android:text="@string/boarding_time_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
@@ -160,7 +160,7 @@
         android:id="@+id/boardingInCountdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/boarding_in_time"
+        android:text="@string/boarding_in_time"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/colorBad"
         app:layout_constraintTop_toBottomOf="@id/BoardingInTimeLabel"
@@ -169,7 +169,7 @@
         <!-- Arrival -->
     <TextView
         android:id="@+id/arrivalTimeLabel"
-        tools:text="@string/arrival_time_label"
+        android:text="@string/arrival_time_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
@@ -182,7 +182,7 @@
         android:id="@+id/arrivalTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/arrival_time"
+        android:text="@string/arrival_time"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintTop_toBottomOf="@id/arrivalTimeLabel"
         app:layout_constraintRight_toRightOf="@id/arrivalTimeLabel"/>
@@ -248,7 +248,7 @@
 
 
     <TextView
-        tools:text="@string/terminal"
+        android:text="@string/terminal"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:id="@+id/terminal"
@@ -276,7 +276,7 @@
 
     <TextView
         android:id="@+id/gate"
-        tools:text="@string/gate"
+        android:text="@string/gate"
         android:layout_width="120dp"
         android:layout_height="0dp"
         app:layout_constraintLeft_toLeftOf="@+id/tableImage"
@@ -303,7 +303,7 @@
 
     <TextView
         android:id="@+id/seat"
-        tools:text="@string/seat"
+        android:text="@string/seat"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/tableImage"
         app:layout_constraintLeft_toLeftOf="@+id/tableImage"
@@ -313,5 +313,18 @@
         app:layout_constraintHorizontal_bias="1.0"
         android:textAlignment="center"
         android:layout_width="120dp" />
+
+
+        <!-- Bar Code -->
+    <ImageView
+        android:id="@+id/barcode"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/barcode"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tableImage"
+        android:layout_marginTop="16dp"
+        />
 
 </android.support.constraint.ConstraintLayout>
