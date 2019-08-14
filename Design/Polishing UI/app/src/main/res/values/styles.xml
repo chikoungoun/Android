@@ -32,6 +32,10 @@
         <item name="android:textColor">@android:color/black</item>
 
     </style>
+    
+    <style name="inboxStyle" parent="folderStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
 
 
 </resources>
