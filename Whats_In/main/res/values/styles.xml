@@ -27,7 +27,7 @@
 
     <style name="textItemTitle">
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:textSize">17sp</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="textItemNormal">
