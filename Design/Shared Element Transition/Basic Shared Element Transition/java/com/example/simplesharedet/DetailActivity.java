@@ -1,5 +1,6 @@
 package com.example.simplesharedet;
 
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -15,5 +16,10 @@ public class DetailActivity extends AppCompatActivity {
 
         TextView textView = (TextView)findViewById(R.id.detail);
         textView.setText(tr);
+    }
+
+    @Override
+    public void onBackPressed() {
+        ActivityCompat.finishAfterTransition(this);
     }
 }
