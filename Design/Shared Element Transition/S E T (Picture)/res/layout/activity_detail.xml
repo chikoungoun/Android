@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:orientation="vertical"
+    android:background="@android:color/background_light">
+
+    <ImageView
+        android:id="@+id/img_act2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/pikachu"
+        android:scaleType="centerCrop"
+        android:transitionName="transit"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula odio eget bibendum egestas. Proin porttitor sagittis luctus. Praesent quam tellus, placerat vel tortor non, eleifend dictum ipsum. Integer blandit ante ac tristique malesuada. Suspendisse potenti. Duis urna lacus, fringilla mattis lacinia at, eleifend nec erat. Ut ullamcorper ultricies ipsum, id bibendum augue placerat eu. Nulla luctus lacinia ornare. Cras sodales dui enim, dapibus facilisis nibh sagittis eget. In tempor dolor id metus dapibus, a gravida nunc blandit. Curabitur pharetra est urna, eu efficitur dolor accumsan vel. Cras consectetur egestas ligula eget rhoncus. "/>
+
+</LinearLayout>
