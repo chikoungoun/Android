@@ -25,5 +25,14 @@
         android:layout_centerInParent="true"
         android:textSize="30sp"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pikachu"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/text_to_click"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"/>
+
 
 </RelativeLayout>
