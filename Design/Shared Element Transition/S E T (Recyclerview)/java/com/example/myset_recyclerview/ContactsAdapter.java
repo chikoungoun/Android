@@ -13,6 +13,18 @@ import java.util.List;
 
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHolder> {
 
+    private OnItemClickListener mListener;
+
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
+
+
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView nameTextView;
@@ -23,6 +35,18 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
 
             nameTextView = (TextView) itemView.findViewById(R.id.contact_name);
             messageButton = (Button) itemView.findViewById(R.id.message_button);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mListener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
 
         }
 
