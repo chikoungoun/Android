@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -31,13 +32,17 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        //Placing a marker
+        // Setting up the coordinates
         double latitude = 34.006708;
         double longitude = -6.820793;
 
+        // creating the markers and setting a title
         MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude,longitude)).title("M-Wayne");
 
+        // Adding the marker to the map
         googleMap.addMarker(marker);
+
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(latitude,longitude)));
 
     }
 }
