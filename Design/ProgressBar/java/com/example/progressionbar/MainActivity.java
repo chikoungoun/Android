@@ -22,6 +22,28 @@ public class MainActivity extends AppCompatActivity {
         progressBar = (ProgressBar)findViewById(R.id.progress_bar);
         textView = findViewById(R.id.textView);
 
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(progressStatus < 100){
+                    progressStatus += 1;
+
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressBar.setProgress(progressStatus);
+                            textView.setText(progressStatus+"/"+progressBar.getMax());
+                        }
+                    });
+                    try{
+                        Thread.sleep(200);
+                    }catch (InterruptedException e){
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+
 
 
     }
