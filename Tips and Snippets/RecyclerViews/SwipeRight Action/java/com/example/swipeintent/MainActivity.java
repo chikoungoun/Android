@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -44,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
 
-                Toast.makeText(MainActivity.this,"Swiped Right",Toast.LENGTH_SHORT).show();
+                Intent call_button = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:007"));
+
+                startActivity(call_button);
             }
         }).attachToRecyclerView(rvContacts);
     }
