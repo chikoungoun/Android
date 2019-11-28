@@ -17,13 +17,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     ArrayList<Contact> contacts = new ArrayList<>();
+    RecyclerView rvContacts;
+    ContactAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RecyclerView rvContacts = (RecyclerView) findViewById(R.id.rvContacts);
+        rvContacts = (RecyclerView) findViewById(R.id.rvContacts);
 
         contacts.add(new Contact("Jean","Kul"));
         contacts.add(new Contact("Marcel","Pascool"));
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         contacts.add(new Contact("Alfred","de Musclay"));
         contacts.add(new Contact("Brendan","Trax"));
 
-        ContactAdapter adapter = new ContactAdapter((contacts));
+        adapter = new ContactAdapter((contacts));
         rvContacts.setAdapter(adapter);
         rvContacts.setLayoutManager(new LinearLayoutManager(this));
 
@@ -49,7 +51,12 @@ public class MainActivity extends AppCompatActivity {
                 Intent call_button = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:007"));
 
                 startActivity(call_button);
+
+                rvContacts.setAdapter(adapter);
+
             }
+
+
         }).attachToRecyclerView(rvContacts);
     }
 }
