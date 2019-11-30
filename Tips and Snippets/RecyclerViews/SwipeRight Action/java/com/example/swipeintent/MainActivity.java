@@ -73,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
 
                 background.draw(c);
             }
+
+            // limit at which the call to intent gets triggered
+            @Override
+            public float getSwipeThreshold(@NonNull RecyclerView.ViewHolder viewHolder) {
+                return 0.6f;
+            }
         }).attachToRecyclerView(rvContacts);
     }
 }
