@@ -49,8 +49,22 @@ public class MainActivity extends AppCompatActivity {
 
         // Swipable part
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT) {
+
+            @Override
+            public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
+
+                int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
+                int swipeFlags = ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
+
+                Log.e("Movement Flag","I am Moving dragFlags : "+dragFlags+", swipeFlag : "+swipeFlags);
+                return makeMovementFlags(dragFlags, swipeFlags);
+
+            }
+
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+
+                Log.e("OnMove","I am Moving");
                 return false;
             }
 
@@ -65,14 +79,17 @@ public class MainActivity extends AppCompatActivity {
                 // call the dial intent
                 startActivity(call_button);
 
-
-
                 // repopulate the recyclerview not to dismiss the data
                 rvContacts.setAdapter(adapter);
+
+                // keeping the opacity solid
+                viewHolder.itemView.setAlpha(1);
             }
 
             @Override
             public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+
+                Log.e("dX"," "+dX);
 
 
                 View itemView = viewHolder.itemView;
@@ -92,21 +109,22 @@ public class MainActivity extends AppCompatActivity {
                 intrinsicHeight = dial_icon.getIntrinsicHeight();
 
                 int dial_iconTop = itemView.getTop() + (itemHeight - intrinsicHeight) / 2;
-                int dial_iconMargin = (itemHeight - intrinsicHeight) / 2;
-
-                int dial_iconLeft = itemView.getRight() - dial_iconMargin - intrinsicWidth;
-                Log.e("ItemView.Right",""+itemView.getRight());
-                int dial_iconRight = itemView.getRight() - dial_iconMargin;
-
                 int dial_iconBottom = dial_iconTop + intrinsicHeight;
 
 
-                dial_icon.setBounds(itemView.getLeft()+16, dial_iconTop, itemView.getLeft() + intrinsicWidth, dial_iconBottom);
+                dial_icon.setBounds(itemView.getLeft()+48, dial_iconTop, itemView.getLeft()+48 + intrinsicWidth, dial_iconBottom);
                 dial_icon.draw(c);
-                
 
 
-                viewHolder.itemView.setAlpha(0.7f);
+                // changing the opacity
+                viewHolder.itemView.setAlpha(0.5f);
+
+                // Put back the opacity to full when is swiped back
+                if(dX == 0){
+                    viewHolder.itemView.setAlpha(1f);
+                }
+
+
 
                 Paint p = new Paint();
                 p.setColor(Color.WHITE);
@@ -115,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 p.setTextAlign(Paint.Align.CENTER);
                 float textWidth = p.measureText("Appeler");
 
-                c.drawText("Appeler", itemView.getRight() - 200, itemView.getHeight()/2, p);
+                c.drawText("Appeler", itemView.getLeft(), itemView.getHeight()/2, p);
 
                 super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
 
@@ -126,6 +144,8 @@ public class MainActivity extends AppCompatActivity {
             public float getSwipeThreshold(@NonNull RecyclerView.ViewHolder viewHolder) {
                 return 0.6f;
             }
+
+
         }).attachToRecyclerView(rvContacts);
     }
 }
