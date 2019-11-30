@@ -50,16 +50,6 @@ public class MainActivity extends AppCompatActivity {
         // Swipable part
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT) {
 
-            @Override
-            public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
-
-                int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
-                int swipeFlags = ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
-
-                Log.e("Movement Flag","I am Moving dragFlags : "+dragFlags+", swipeFlag : "+swipeFlags);
-                return makeMovementFlags(dragFlags, swipeFlags);
-
-            }
 
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
@@ -74,29 +64,23 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent call_button = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:007"));
 
-
-
                 // call the dial intent
                 startActivity(call_button);
 
                 // repopulate the recyclerview not to dismiss the data
                 rvContacts.setAdapter(adapter);
 
-                // keeping the opacity solid
-                viewHolder.itemView.setAlpha(1);
             }
 
             @Override
             public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
-
-                Log.e("dX"," "+dX);
 
 
                 View itemView = viewHolder.itemView;
                 int itemHeight = itemView.getHeight();
 
                 // Setting up the background
-                final ColorDrawable background = new ColorDrawable(Color.RED);
+                final ColorDrawable background = new ColorDrawable(Color.GREEN);
                 background.setBounds(16,itemView.getTop(),itemView.getLeft() + (int) dX, itemView.getBottom());
                 background.draw(c);
 
@@ -123,17 +107,6 @@ public class MainActivity extends AppCompatActivity {
                 if(dX == 0){
                     viewHolder.itemView.setAlpha(1f);
                 }
-
-
-
-                Paint p = new Paint();
-                p.setColor(Color.WHITE);
-                p.setAntiAlias(true);
-                p.setTextSize(34);
-                p.setTextAlign(Paint.Align.CENTER);
-                float textWidth = p.measureText("Appeler");
-
-                c.drawText("Appeler", itemView.getLeft(), itemView.getHeight()/2, p);
 
                 super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
 
