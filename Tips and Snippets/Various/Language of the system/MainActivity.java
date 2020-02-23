@@ -18,10 +18,21 @@ public class MainActivity extends AppCompatActivity {
 
 
         TextView txt = findViewById(R.id.text_view);
+        TextView txt2 = findViewById(R.id.text_view2);
 
         language = Resources.getSystem().getConfiguration().locale.getLanguage();
 
-
         txt.setText(language);
+
+        if (language == "nl"){
+
+            txt2.setText("This is the Nederlandish version");
+        }
+        else if(language=="fr"){
+            txt2.setText("This is the French version");
+
+        }else{
+            txt2.setText("This is Another Language than the belgian ones");
+        }
     }
 }
